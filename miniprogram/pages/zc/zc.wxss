@@ -1,0 +1,29 @@
+/* miniprogram/pages/zc/zc.wxss */
+.xw{
+  padding: 8% 0 0 10%
+}
+.add-page{
+  padding: 8% 10% 8% 10%
+}
+.add-btn{
+  width: 150px;
+  background-color: #00CED1;
+  color: #ffffff;
+  font-weight: bold
+}
+.k{
+  border: 3rpx solid #a0a0a0;
+  border-radius: 5px;
+  background-color: #ffffff;
+  font-size: 30rpx
+}
+.z text{
+  padding: 10rpx 0 0 0
+}
+
+.tupian{
+  background-color: #00CED1;
+  text-align: center;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px
+}

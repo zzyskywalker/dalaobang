@@ -1,0 +1,62 @@
+/* miniprogram/pages/shouye/shouye.wxss */
+.tupian{
+  text-align: center;
+  background-color:#00CED1;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  height:130px;
+}
+.userinfo-avatar {
+  width: 150rpx;
+  height: 150rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+  background-size: cover;
+  background-color: white;
+  justify-items: center;
+}
+.txan{
+  display: flex;
+  justify-content: center
+}
+.ts{
+  padding-top: 20px;
+  font-size: 20px;
+  text-align-last: center;
+  color: rgb(235, 225, 225)
+}
+
+.login-btn{
+  background-color: #00CED1;
+  font-weight: bold;
+  font-size: 35rpx;
+  color: #ffffff;
+  width: 40%;
+  height: 80%;
+}
+.login-psw{
+  background-color:whitesmoke;
+  width: 100%
+}
+.continer{
+  width: 100%;
+  height: 50px;
+  flex-direction:row;
+  justify-content: center
+}
+.liubai{
+height: 20px;
+width: 100%
+}
+.int{
+  margin-left: 10px;
+  border-radius: 5px;
+  width:70%;
+  background-color: whitesmoke;
+}
+.pscontiner{
+
+  display: flex;
+  flex-direction: row;
+
+}

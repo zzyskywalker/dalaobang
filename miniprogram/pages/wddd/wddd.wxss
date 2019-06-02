@@ -1,0 +1,23 @@
+scroll-view-y{
+
+  width:100%;
+  height:460px;
+  background-color:whitesmoke;
+}
+.view-xinxi{
+  width:100%;
+  height:25%;
+  margin-top:5px;
+  background-color:white
+}
+.view-ziti{
+  width:100%;
+  height: 33px;
+}
+
+.container{
+
+  width:100%;
+  height:450px;
+  background-color: whitesmoke;
+}

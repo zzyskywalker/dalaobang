@@ -1,0 +1,14 @@
+<!--miniprogram/pages/wddd/wddd.wxml-->
+<view class='container'>
+<scroll-view class='scroll-view-y' scroll-y="{{true}}" enable-back-to-top="{{true}}" >
+
+<view class='view-xinxi' wx:for="{{ddxx}}" wx:key="_id" >
+<navigator url='/pages/ddxq/ddxq?tcid={{item.tcid}}'>
+<view class='view-ziti'>所授科目：{{item.kc}}</view>
+<view class='view-ziti'>空闲时间：{{item.sj}}</view>
+</navigator>
+</view>
+
+</scroll-view>
+
+</view>

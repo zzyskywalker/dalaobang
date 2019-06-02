@@ -1,0 +1,43 @@
+{
+  "pages": [
+    "pages/shouye/shouye",
+    "pages/wdkt/wdkt",
+    "pages/wd/wd",
+    "pages/kcxx/kcxx",
+    "pages/zhuye/zhuye",
+    "pages/kqkc/kqkc",
+    "pages/ddxq/ddxq",
+    "pages/wddd/wddd",
+    "pages/test/test",
+    "pages/zc/zc",
+    "pages/index/index",
+    "pages/ktxq/ktxq"
+  ],
+  "window": {
+    "backgroundColor": "#00CED1",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#00CED1",
+    "navigationBarTitleText": "大佬帮",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "backgroundColor": "#F6F6F6",
+    "selectedColor": "#1cd4c6",
+    "color": "#a6a6a6",
+    "list": [
+      {
+        "pagePath": "pages/zhuye/zhuye",
+        "text": "主页",
+        "iconPath": "images/zy2.png",
+        "selectedIconPath": "images/zy.png"
+      },
+      {
+        "pagePath": "pages/wd/wd",
+        "text": "我的",
+        "iconPath": "images/wd2.png",
+        "selectedIconPath": "images/wd.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

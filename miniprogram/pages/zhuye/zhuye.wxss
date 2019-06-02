@@ -1,0 +1,21 @@
+/* miniprogram/pages/zhuye/zhuye.wxss */
+.scroll-view-y{
+
+  width:100%;
+  height:460px;
+  background-color:whitesmoke;
+}
+.view-xinxi{
+
+  width:100%;
+  height:30%;
+  margin-top: 10px;
+  background-color: white;
+}
+.view-ziti{
+  margin-left: 5%;
+  width:90%;
+  height: 33px;
+  background-color:white;
+    
+}

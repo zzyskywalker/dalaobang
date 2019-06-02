@@ -1,0 +1,16 @@
+<!--miniprogram/pages/ddxq/ddxq.wxml-->
+<view class="tupian">
+  <image src='/images/dalaobang.png'mode='widthFix'></image>
+</view>
+<view class='container' wx:for="{{ddxq}}" wx:key="_id">
+<view class='xx'>所授科目：{{item.kc}}</view>
+<view class='xx'>空闲时间：{{item.sj}}</view>
+<view class='xx'>QQ号：{{item.qq}}</view>
+<view class='xx'>期望薪酬：{{item.xc}}</view>
+</view>
+<view class='view-but'>
+<button class='but' bindtap='cancelbtn'>取消订单
+</button>
+<button class='but' bindtap='cancel'>返回
+</button>
+</view>

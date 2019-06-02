@@ -1,0 +1,16 @@
+<view class="tupian">
+   <image src='/images/dalaobang.png'mode='widthFix'></image>
+</view>
+<view class="add-page">
+    <text class='z'>学号</text>
+    <input class="k" placeholder="请输入学号" type="number" bindinput="bindKeyInputxh" value="{{inputValue1}}"  />
+    <text class='z'>网关密码</text>
+    <input class="k" placeholder="请输入密码" style="flex-grow:1"password="true"bindinput="bindKeyInputmm" value="{{inputValue2}}"  />
+    <text class='z'>昵称</text>
+    <input class="k" placeholder="请输入昵称" bindinput="bindKeyInputnc" value="{{inputValue3}}"  />
+    <text class='z'>邮箱</text>
+    <input class="k" placeholder="请输入邮箱"  bindinput="bindKeyInputyx" value="{{inputValue4}}"  />
+    <text class='z'>QQ</text>
+    <input class="k" placeholder="请输入QQ号"  bindinput="bindKeyInputQQ" value="{{inputValue5}}"  />
+</view>
+    <button  class="add-btn" bindtap="addbtn" >注册</button>

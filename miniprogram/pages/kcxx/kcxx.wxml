@@ -1,0 +1,18 @@
+<!--miniprogram/pages/kcxx/kcxx.wxml-->
+<view class="tupian">
+  <image src='/images/dalaobang.png'mode='widthFix'></image>
+</view>
+<view class='container' wx:for="{{kcxx}}" wx:key="_id">
+<view class='xx'>所授科目：{{item.kc}}</view>
+<view class='xx'>所在专业：{{item.zy}}</view>
+<view class='xx'>所在年纪：{{item.nj}}</view>
+<view class='xx'>空闲时间：{{item.sj}}</view>
+<view class='xx'>期望报酬：{{item.xc}}</view>
+<view class='xxms'>个人介绍：{{item.ms}}</view>
+</view>
+<view class='view-but'>
+<button class='but' bindtap='addbtn'>确认订单
+</button>
+<button class='but' bindtap='cancel'>取消
+</button>
+</view>

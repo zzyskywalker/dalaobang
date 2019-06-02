@@ -1,0 +1,14 @@
+<!--miniprogram/pages/zhuye/zhuye.wxml-->
+
+<scroll-view class='scroll-view-y' scroll-y="{{true}}" enable-back-to-top="{{true}}" >
+
+<view class='view-xinxi' wx:for="{{kcxx}}" wx:key="_id" >
+<navigator url='/pages/kcxx/kcxx?_id={{item._id}}'>
+<view class='view-ziti'>所授科目：{{item.kc}}</view>
+<view class='view-ziti'>所在专业：{{item.zy}}</view>
+<view class='view-ziti'>空闲时间：{{item.sj}}</view>
+<view class='view-ziti'>所在年级：{{item.nj}}</view>
+</navigator>
+</view>
+
+</scroll-view>

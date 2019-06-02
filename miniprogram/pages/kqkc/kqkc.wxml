@@ -1,0 +1,32 @@
+<!--miniprogram/pages/kqkc/kqkc.wxml-->
+<view class='view-container'>
+<view class='container'>
+<text class='wenzi'>课程</text>
+<input class='int' bindinput='bindkeyinput1' placeholder='你打算教授什么专业呢' focus='true' ></input>
+</view>
+<view class='container'>
+<text class='wenzi'>专业</text>
+<input class='int' bindinput='bindkeyinput2' placeholder='你是什么专业呢'></input>
+</view>
+<view class='container'>
+<text class='wenzi'>年级</text>
+<input class='int' bindinput='bindkeyinput3' placeholder='你现在是大几呢'></input>
+</view>
+<view class='container'>
+<text class='wenzi'>时间</text>
+<input class='int' bindinput='bindkeyinput4' placeholder='请输入您的空闲时间'></input>
+</view>
+<view class='container'>
+<text class='wenzi'>薪酬</text>
+<input class='int' bindinput='bindkeyinput5' placeholder='你想要什么呢'></input>
+</view>
+<view class='container2'>
+<text class='wenzi'>个人介绍</text>
+<textarea class='int2' bindinput='bindkeyinput6' placeholder='稍微的自我介绍一下吧'></textarea>
+</view>
+
+<view class='btn-container'>
+<button class='btn' bindtap='add'>开启课程</button>
+<button class='btn' bindtap='back'>返回</button>
+</view>
+</view>

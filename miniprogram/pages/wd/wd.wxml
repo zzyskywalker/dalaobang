@@ -1,0 +1,18 @@
+<!--pages/wd/wd.wxml-->
+<view class='view-container'>
+<view class='container'>
+<image src='{{avatarUrl}}'mode='aspectFit'class='userinfo-avatar' ></image>
+<text>{{nickname}}</text>
+<view class='view-tianchong'></view>
+</view>
+
+<view class='na-view'>
+<navigator class='na'url="/pages/wddd/wddd"><text class='natext'>我的订单</text></navigator>
+</view>
+<view class='na-view'>
+<navigator class='na'url='/pages/kqkc/kqkc'><text class='natext'>开启课程</text></navigator>
+</view>
+<view class='na-view'>
+<navigator class='na'url='/pages/wdkt/wdkt'><text class='natext'>我的课堂</text></navigator>
+</view>
+</view>

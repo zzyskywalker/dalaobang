@@ -1,0 +1,42 @@
+/* miniprogram/pages/kcxx/kcxx.wxss */
+.tupian{
+  background-color: #1CD4C6;
+  text-align: center;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px
+}
+.container
+{
+  width:100%;
+  height: 280px;
+  margin-top: 10px;
+  background-color: white;
+}
+.xx{
+  margin-left: 3%;
+width:90%;
+height:30px;
+ background-color: white;
+ text-align:justify;
+}
+.xxms{
+  margin-left: 3%;
+width:90%;
+height:100px;
+ background-color: white;
+ text-align:justify;
+}
+.view-but{
+  width:100%;
+  height:60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.but{
+  background-color: #1CD4C6;
+  width:30%;
+  height:40px;
+  font-size:17px;
+  text-align-last: center;
+}

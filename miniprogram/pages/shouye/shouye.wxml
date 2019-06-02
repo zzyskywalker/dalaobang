@@ -1,0 +1,25 @@
+<!--miniprogram/pages/shouye/shouye.wxml-->
+<view class="tupian">
+  <image src='/images/dalaobang.png'mode='widthFix'></image>
+</view>
+
+<view class="ts"><text>点击头像识别用户</text></view>
+<!--获取用户信息-->
+<view class='txan'>
+    <button 
+      open-type="getUserInfo" 
+      bindgetuserinfo="onGetUserInfo"
+      class="userinfo-avatar"
+      style="background-image: url({{avatarUrl}})"
+    ></button>
+</view>
+<view class="continer">
+   <view class='pscontiner'>
+     <text>密码</text>
+     <input class='int' placeholder='请输入密码' password="true"bindinput="passwordInput"/></view>
+     <view class="liubai"></view>
+  <view class="continer"><button class="login-btn"bindtap="loginBtnClick">登录</button></view>
+  <view class="continer">
+    <button class="login-btn"bindtap="djzcan">注册</button>
+  </view>
+</view>
