@@ -20,6 +20,10 @@
 <text class='wenzi'>薪酬</text>
 <input class='int' bindinput='bindkeyinput5' placeholder='你想要什么呢'></input>
 </view>
+<view class='container'>
+<text class='wenzi'>联系方式</text>
+<input class='int' bindinput='bindkeyinput7' placeholder='你的联系方式'></input>
+</view>
 <view class='container2'>
 <text class='wenzi'>个人介绍</text>
 <textarea class='int2' bindinput='bindkeyinput6' placeholder='稍微的自我介绍一下吧'></textarea>

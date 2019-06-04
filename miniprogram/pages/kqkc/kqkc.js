@@ -12,6 +12,7 @@ Page({
        sj:null,
        xc:null,
        ms:null,
+       qq:null
   },
 
   /**
@@ -99,8 +100,13 @@ Page({
       ms: e.detail.value
     })
   },
+  bindkeyinput7: function (e) {
+    this.setData({
+      qq: e.detail.value
+    })
+  },
   add:function(){
-    if (this.data.kc == '') {
+    if (this.data.kc == null) {
       wx.showModal({
         title: '课程为空',
         content: '请输入所要讲授的课程',
@@ -111,7 +117,7 @@ Page({
         }
       });
     }
-    if (this.data.zy == '') {
+    if (this.data.zy == null) {
       wx.showModal({
         title: '专业为空',
         content: '请输入您所在的专业',
@@ -122,7 +128,7 @@ Page({
         }
       });
     }
-    if (this.data.nj == '') {
+    if (this.data.nj == null) {
       wx.showModal({
         title: '年级为空',
         content: '请输入您在的年级',
@@ -133,7 +139,7 @@ Page({
         }
       });
     }
-    if (this.data.sj == '') {
+    if (this.data.sj == null) {
       wx.showModal({
         title: '时间为空',
         content: '请输入您的空闲时间',
@@ -144,7 +150,7 @@ Page({
         }
       });
     }
-    if (this.data.xc == '') {
+    if (this.data.xc == null) {
       wx.showModal({
         title: '薪酬为空',
         content: '请输入您的薪酬',
@@ -155,11 +161,23 @@ Page({
         }
       });
     }
-    if(this.data.kc != '' &&
-    this.data.zy != '' &&
-    this.data.nj != '' &&
-    this.data.sj != '' &&
-    this.data.xc != '' ){
+    if (this.data.qq == null) {
+      wx.showModal({
+        title: '联系方式为空',
+        content: '请输入您的联系方式',
+        success: function (res) {
+          if (res.confirm) {
+            console.log('用户点击确定')
+          }
+        }
+      });
+    }
+    if(this.data.kc != null &&
+    this.data.zy != null &&
+    this.data.nj != null &&
+    this.data.sj != null &&
+    this.data.xc != null &&
+    this.data.qq != null ){
     const db=wx.cloud.database({
       env:'sjk-666'
     })
@@ -172,13 +190,16 @@ Page({
        nj:this.data.nj,
        sj:this.data.sj,
        xc:this.data.xc,
-       ms:this.data.ms
+       ms:this.data.ms,
+       qq:this.data.qq
      },
      success:res=>{
        console.log(res.data)
        wx.navigateBack({
          delta:1
        })
+     },fali:res=>{
+       console.error("error")
      }
    }) 
    }

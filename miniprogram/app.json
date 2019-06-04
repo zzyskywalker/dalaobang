@@ -1,11 +1,12 @@
 {
   "pages": [
+     
     "pages/shouye/shouye",
+    "pages/kqkc/kqkc",
     "pages/wdkt/wdkt",
     "pages/wd/wd",
     "pages/kcxx/kcxx",
     "pages/zhuye/zhuye",
-    "pages/kqkc/kqkc",
     "pages/ddxq/ddxq",
     "pages/wddd/wddd",
     "pages/test/test",

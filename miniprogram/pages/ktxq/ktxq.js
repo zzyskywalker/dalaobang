@@ -1,10 +1,13 @@
-// miniprogram/pages/ktxq/ktxq.js
+// miniprogram/pages/ddxq/ddxq.js
+var app = getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    tcid: null,
+    ddxq: []
 
   },
 
@@ -12,7 +15,38 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    this.setData({
+      tcid: options.tcid
+    })
+    const db = wx.cloud.database({
+      env: 'sjk-666'
+    })
+    db.collection('ddxq').where({
+      tcid: this.data.tcid
+    }).get(
+      {
+        success: res => {
+          this.setData({
+            ddxq: res.data
+          })
+          console.log(this.data.ddxq[0])
+        },
 
+      })
+    if (this.data.ddxq == []) {
+      wx.showModal({
+        title: '错误',
+        content: '数据拉取错误',
+        success: function (res) {
+          if (res.confirm) {
+            console.log('用户点击确定')
+            wx.navigateBack({
+              delta: 1
+            });
+          }
+        }
+      });
+    }
   },
 
   /**
@@ -62,5 +96,10 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  cancel: function () {
+    wx.navigateBack({
+      delta: 1
+    })
   }
 })

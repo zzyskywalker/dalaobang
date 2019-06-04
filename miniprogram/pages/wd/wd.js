@@ -15,9 +15,24 @@ Page({
    */
   onLoad: function (options) {
         this.setData({
-          avatarUrl: "https://wx.qlogo.cn/mmopen/vi_32/mhTHRCsohKk7ZyTh2sNjwM8gZ0iay5tR7d99mUREjicoUdLGnjqeEQ9gswxvNb43Q4gV2fTkB9cUZNTmk8c1MFzQ/132",
-          nickname:"老大"
+          avatarUrl: app.appData.userinfo.touxiang,
         })
+
+    const db = wx.cloud.database({
+      env: 'sjk-666'
+    })
+    db.collection('yhxx').where({
+      _id: app.appData.userip
+    }).get(
+      {
+        success: res => {
+          this.setData({
+           nickname: res.data[0].nc
+          })
+          console.log(res.data[0].nc)
+        },
+
+      })
   },
 
   /**

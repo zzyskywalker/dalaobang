@@ -1,5 +1,6 @@
 // miniprogram/pages/kcxx/kcxx.js
 var app = getApp();
+
 Page({
 
   /**
@@ -9,7 +10,7 @@ Page({
      id:null,
      kcxx:[],
      qq:null,
-     shanchu:false
+     shanchu:null
   },
 
   /**
@@ -19,7 +20,7 @@ Page({
     this.setData(
       {
         id: options._id,
-        shanchu:true
+        shanchu:1
       });
 
 
@@ -65,32 +66,32 @@ Page({
         }
       });
     }
-    db.collection('yhxx').where({
-      _id: this.data.id
-    }).get(
-      {
-        success: res => {
-          this.setData({
-            qq: res.data[0].qq
-          })
-          console.log(this.data.qq)
-        },
+    // db.collection('yhxx').where({
+    //   _id: this.data.id
+    // }).get(
+    //   {
+    //     success: res => {
+    //       this.setData({
+    //         qq: res.data[0].qq
+    //       })
+    //       console.log(this.data.qq)
+    //     },
 
-      })
-    if (this.data.qq == '') {
-      wx.showModal({
-        title: '错误',
-        content: '数据拉取错误',
-        success: function (res) {
-          if (res.confirm) {
-            console.log('用户点击确定')
-            wx.navigateBack({
-              delta: 1
-            });
-          }
-        }
-      });
-    }
+    //   })
+    // if (this.data.qq == '') {
+    //   wx.showModal({
+    //     title: '错误',
+    //     content: '数据拉取错误',
+    //     success: function (res) {
+    //       if (res.confirm) {
+    //         console.log('用户点击确定')
+    //         wx.navigateBack({
+    //           delta: 1
+    //         });
+    //       }
+    //     }
+    //   });
+    // }
   },
 
   /**
@@ -128,6 +129,7 @@ Page({
 
   },
   addbtn:function(){
+    var that = this;
     const db = wx.cloud.database({
       env: 'sjk-666'
     })
@@ -137,21 +139,21 @@ Page({
     tcid:this.data.id,
     kc:this.data.kcxx[0].kc,
     sj:this.data.kcxx[0].sj,
-    qq:this.data.qq,
+    qq:this.data.kcxx[0].qq,
     xc:this.data.kcxx[0].xc
     },
-    success(){
-    console.log("下单成功")
-    this.setData(
-      {
-        shanchu:true
-      }
-    )
-      console.log(shanchu)
+    success:res=>{
+
+        console.log("下单成功",res)
+        
+        that.setData({
+          shanchu:1
+        })
+    
       // wx.cloud.callFunction({
       //   name: 'delete',
       //   data:{
-      //     crid:this.data.id
+      //     crid:that.data.id
       //   },
       //   success(res){console.log('调用成功'),
       //     wx.navigateBack({
@@ -163,6 +165,9 @@ Page({
       // })
       },
       fail: err => { 
+        that.setData({
+          shanchu:0
+        })
         wx.showToast({ 
           icon: 'none', title: '新增记录失败' })     
          console.error('[数据库] [新增记录] 失败：', err)
@@ -173,7 +178,8 @@ Page({
           //  )                   
                               }
       })
-      if(this.data.shanchu == true){
+      console.log(that.data.shanchu)
+      if(this.data.shanchu == 1){
     wx.cloud.callFunction({
       name: 'delete',
       data: {
